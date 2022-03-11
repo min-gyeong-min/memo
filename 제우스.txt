@@ -1,0 +1,36 @@
+JEUS 서버 기동
+- startDomainAdminServer -u administrator -p (pw)
+- startManagedServer -domain jeus_domain -server server1 -u administrator -p (pw)
+
+JEUS 서버 구동 다운
+- stopServer -host localhost:9736 -u administrator -p (pw)
+
+JEUS 웹 서버 
+- http://127.0.0.1:9736/webadmin/login
+
+JEUS Sample Page 접속
+- http://127.0.0.1:9736/webadmin/examples
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+***** JEUS 기동 순서 *****
+
+1. DAS 기동 -> startDomainAdminServer -u administrator -p (pw) 
+2. MS 기동 -> startManagedServer -domain jeus_domain -server server1 -u administrator -p (pw)
+3. webadmin 접속 후 adminserver와 server1이 RUNNING 상태면 성공
+
+***** JEUS 다운 순서 *****
+
+1. MS 다운시키기 : webadmin에서 LOCK & EDIT를 풀고 왼쪽 Servers 탭에 stop을 눌러줘서 시스템 상태 server1의shutdown 확인
+2. DAS 다운시키기 :  stopServer -host localhost:9736 -u administrator -p (pw)
+
+
+
+
+
+
+
+
+
+ 
+
+ 
